@@ -1,0 +1,140 @@
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	overflow:hidden;/* to disable browser scroll bar*/
+	margin:0;
+	background:url(../assets/bg_atown.png) fixed 0 0 no-repeat;
+	background-size:cover;
+}
+h1{
+	color:#fff;
+	font-size: 70px;
+	font-family:"Lato","HelveticaNeue",Helvetica,Arial,sans-serif;
+	font-weight:300;
+	text-align:center;
+}
+h2{
+	color:#fff;
+	font-size:22px;
+	font-family:"Lato","HelveticaNeue",Helvetica,Arial,sans-serif;
+	font-weight:300;
+	text-align:center;
+	line-height:28px;
+}
+p{
+	color:#fff;
+	font-family:"Lato","HelveticaNeue",Helvetica,Arial,sans-serif;
+}
+a{
+	color:#fff;
+	text-decoration:none;
+}
+li{
+	list-style:none;
+}
+.container{
+	margin:0 auto;
+}
+#header{
+	background-color:#333;
+	position:fixed;
+	left:0;
+	top:0;
+	height:62px;
+	width:100%;
+	z-index:9999;
+	box-shadow:0px 3px 2px rgba(0,0,0,0.15);
+}
+.navbar{
+	margin-top:24px;
+}
+.nav{
+	width:960px;
+	margin:0px auto;
+/*	padding:24px 20px 20px 20px;*/
+}
+.nav>li{
+	margin-top:24px;
+	padding:24px 20px 20px 20px !important;
+}
+.nav>li{
+	display:inline;
+	list-style:none;
+}
+li:hover{
+	color:;
+}
+.dropdown{
+	position:relative;
+	width:auto;
+}
+.dropdown-menu{
+	display:none;
+    background-color:#333;
+	position:absolute;
+	top:62px;
+	left:0;/*important to give top and left value. if no value, chrome work well but FF, Opera, IE shit. and after mouseover, The left value of dropdown menu box goes -408; keep left being 0 to make sure the box always be right place*/
+	margin:0px 0 0 24px;
+	padding:0;
+}
+.dropdown-menu li:nth-child(1){
+	border-bottom:#FFF solid 2px;
+}
+.nav li, .nav a{
+	font:100 16px/100% Verdana,Geneva,sans-serif;
+	color:#eee;
+	text-decoration:none;
+	text-shadow:0 -1px 0 #BBB;
+	padding:0 10px 0 30px;
+	text-align:center;
+}
+.nav a:hover{
+	color:#EC4D00;
+	text-shadow:0 -1px 0 #F60;
+}
+.dropdown-menu li,.dropdown-menu a{
+	padding:10px 15px 10px 15px;
+	margin:auto 1px;
+}
+#container{
+	position:relative;
+	top:62px;
+	left:0;
+}
+#container section{
+	position:absolute;
+	z-index:2000;
+}
+section{
+	height:580px;
+}
+.text{
+	margin:12% 20% 0 20%;
+	padding:3% 0;               /* these 2 lines above makes text vertical centered */
+	border-top:dashed 1px #fff;
+	border-bottom:dashed 1px #fff;
+}
+section>p{
+	margin:15px auto;
+	width:9%; /*assign the width by persent to make responsive web page*/
+	height:50px;
+	border:solid 1px #fff;
+}
+#whoiam{
+	position:absolute;
+	padding:16px 24px;
+	font-weight:400;
+	font-size:1em;
+	overflow:hidden;
+}
+section>p:hover{
+}
+#home{
+	top:-210px;
+	left:-320px;
+	width:1440px;
+	height:580px;
+}

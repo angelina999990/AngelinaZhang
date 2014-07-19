@@ -15,7 +15,7 @@ $(document).ready(function(){
 		// Move to 'start' element
 		path.moveTo(400, 50, {name: "home"});
 		// Line to 'description' element
-		path.lineTo(400, 800, {name: "me"});
+		path.lineTo(400, 630, {name: "me"});
 		// Arc down and line to 'syntax'
 		path.arc(200, 1200, 400, -Math.PI/2, Math.PI/2, true);
 		path.lineTo(600, 1600, {

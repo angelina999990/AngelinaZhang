@@ -27,22 +27,34 @@
     </div>
     <div id="container">
     	<section id="home">
-        	<div class="text">
+        	<div class="text" id="home-txt">
         		<h1 id="word">Angelina Zhang Xue</h1>
                 <h2>web design | ui/ue design | front-end development</h2>
             </div>
-            <p><a id="whoiam" href="#">WHO I AM?</a></p>
+            <p><a id="resume" href="#">RESUME</a></p>
         </section>
         
         <section id="me">
-        	<div class="text">
-        		<h1></h1>
-        		<p></p>
+        	<div class="career">
+            	<span class="point">
+                	<span class="info" style="font-weight:bold;">2009.09</span><br />
+                	<span class="info dot">Xihua University</span><br />
+                	<span class="info">Computer Science</span>
+                </span>
+            </div>
+        	<div class="text" id="aboutme">
+        		<h1>My name is Angelina Zhang Xue.</h1>
+        		<h2>I want to make career in Web design ,UI/UE design field.</h2>
+                <p>I didn't work as designer before. It's might be hard for company to have a person without that muce relevant experience. What I want is juat a chance to go and let it impresss you.</p>
+                <p>
+                <span class="event">University<br>Computer Science</span>
+                <span class="time">2012.10-2012.12</span>
+                <span class="event">Internship</span>
+                </p>
         	</div>
         </section>
         
-        <section id="gallery">
-        	
+        <section id="gallery">	
         </section>
         
         <section id="story13">

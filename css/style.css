@@ -3,6 +3,9 @@
 	margin:0;
 	padding:0;
 }
+section{
+	border:solid 1px white;
+}
 body{
 	overflow:hidden;/* to disable browser scroll bar*/
 	margin:0;
@@ -11,18 +14,18 @@ body{
 }
 h1{
 	color:#fff;
-	font-size: 70px;
+/*	font-size: 70px;*/
 	font-family:"Lato","HelveticaNeue",Helvetica,Arial,sans-serif;
-	font-weight:300;
-	text-align:center;
+/*	font-weight:300;
+	text-align:center;*/
 }
 h2{
 	color:#fff;
-	font-size:22px;
+/*	font-size:22px;*/
 	font-family:"Lato","HelveticaNeue",Helvetica,Arial,sans-serif;
-	font-weight:300;
+/*	font-weight:300;
 	text-align:center;
-	line-height:28px;
+	line-height:28px;*/
 }
 p{
 	color:#fff;
@@ -39,7 +42,7 @@ li{
 	margin:0 auto;
 }
 #header{
-	background-color:#333;
+	background-color:rgba(20,20,20,0.8);
 	position:fixed;
 	left:0;
 	top:0;
@@ -63,9 +66,6 @@ li{
 .nav>li{
 	display:inline;
 	list-style:none;
-}
-li:hover{
-	color:;
 }
 .dropdown{
 	position:relative;
@@ -108,33 +108,92 @@ li:hover{
 	position:absolute;
 	z-index:2000;
 }
-section{
-	height:580px;
-}
-.text{
+#home-txt{
 	margin:12% 20% 0 20%;
 	padding:3% 0;               /* these 2 lines above makes text vertical centered */
 	border-top:dashed 1px #fff;
 	border-bottom:dashed 1px #fff;
 }
-section>p{
+section#home p{
 	margin:15px auto;
 	width:9%; /*assign the width by persent to make responsive web page*/
-	height:50px;
-	border:solid 1px #fff;
+	height:7%;
+/*	border:solid 1px #fff;
+	-webkit-border-radius:3px;
+	border-radius:3px;*/
 }
-#whoiam{
+#resume{
 	position:absolute;
-	padding:16px 24px;
+	padding:12px 24px;
 	font-weight:400;
 	font-size:1em;
 	overflow:hidden;
+	border:solid 1px #fff;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-webkit-transition:background-color 1s;
+	transition:background-color 1.5s;
 }
-section>p:hover{
+a#resume:hover{
+	background-color:#ccc;
+	-moz-opacity:0.8;
+	-khtml-opacity:0.8;/*#works in Safari 1.x*/
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	color:rgba(0,0,0,0.7);/*make the text transparency, it may not obvious now. when the background image keep changing, it shows*/
 }
 #home{
 	top:-210px;
 	left:-320px;
+	height:580px;
+	width:1440px;
+}
+#home h1{
+	font-size:70px;
+	font-weight:300;
+	text-align:center;
+}
+#home h2{
+	font-size:22px;
+	font-weight:300;
+	text-align:center;
+	line-height:28px;
+}
+#me{
+	top:370px;
+	left:-320px;
 	width:1440px;
 	height:580px;
 }
+.career{
+	width:500px;
+	height:400px;
+	background:url(../assets/career-subway.png) center no-repeat;
+	background-color:rgba(0,0,0,0.7);
+	position:absolute;
+	top:100px;
+	left:150px;
+}
+#aboutme{
+	float:right;
+	width:50%;
+}
+.career{
+	margin:0 10%;
+}
+.info{
+	color:white;
+	font-size:10px;
+	font-family:"Lato","HelveticaNeue",Helvetica,Arial,sans-serif;
+	padding-left:20px;
+}
+.dot{
+	background:url(../assets/career-dot.png) left no-repeat;
+}
+.point{
+	position:absolute;
+	top:40px;
+	left:244px;
+}
+
+	

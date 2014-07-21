@@ -7,8 +7,37 @@ $(document).ready(function(){
 		$(".dropdown-menu").stop().slideToggle(200);
 	});
 	
+/*	$("#click_me").click(function(e){
+		e.preventDefault();
+		$("#me").ScrollTo({
+			duration:1500
+		});
+	});*/
+	$("#click_me").click(function(){
+		$("html body").animate({scrollTop:0},500);
+		return false;
+	});
+	$(".nav a").click(function(e){
+		e.preventDefault();
+		element=$(this).attr("href")
+		switch(element){
+			case '#home': offset=0; break;
+			case '#me': offset=742; break;
+			case '#gallery': offset=1422; break;
+			default: offset=2064;
+		};
+		$("html body").animate({scrollTop:offset},1000)	
+	});
+		
+/*	$(".nav a").click(function(e){
+		e.preventDefault();
+		element=$(this).attr("href");
+		$(element).ScrollTo({
+			duration:1000
+		});
+	});*/
 	
-		var path = $.fn.scrollPath("getPath",{
+/*		var path = $.fn.scrollPath("getPath",{
 			scrollSpeed:150,
 			rotationSpeed:Math.PI/10
 		});
@@ -64,6 +93,6 @@ $(document).ready(function(){
 			// for extra easing functions like the one below
 			$.fn.scrollPath("scrollTo", target, 1000, "easeInOutSine");
 		});
-	});
+	});*/
 
 });

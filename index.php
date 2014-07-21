@@ -4,8 +4,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>AngelinaZhang</title>
 	<link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/scrollpath.css">
+<!--    <link rel="stylesheet" type="text/css" href="css/scrollpath.css">-->
     <script type="text/javascript" src="script/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="script/jquery-scrollto.js"></script>
     <script type="text/javascript" src="script/myscript.js"></script>
 </head>
 
@@ -13,7 +14,7 @@
 	<div id="header">
         <nav class="navbar">
         	<ul class="nav">
-            	<li class="active"><a href="#home">HOME</a></li>
+            	<li class="active"><a id="click_me" href="#home">HOME</a></li>
                 <li><a href="#me">ME</a></li>
                 <li><a href="#gallery">GALLERY</a></li>
                 <li class="dropdown"><a href="#story14">STORY</a>
@@ -27,7 +28,7 @@
     </div>
     <div id="container">
     	<section id="home">
-        	<div class="text" id="home-txt">
+        	<div id="home-txt">
         		<h1 id="word">Angelina Zhang Xue</h1>
                 <h2>web design | ui/ue design | front-end development</h2>
             </div>
@@ -36,25 +37,85 @@
         
         <section id="me">
         	<div class="career">
-            	<span class="point">
+            	<span class="point1">
                 	<span class="info" style="font-weight:bold;">2009.09</span><br />
                 	<span class="info dot">Xihua University</span><br />
                 	<span class="info">Computer Science</span>
                 </span>
+                <span class="point2">
+                	<span class="info" style="font-weight:bold">2012.10</span><br />
+                    <span class="info dot">Monolithic Power Systems.Inc.</span><br />
+                	<span class="info">Internship</span>
+                </span>
+                <span class="point3">
+                	<span class="info" style="font-weight:bold;">20013.02</span><br />
+                	<span class="info dot">Bolo software</span><br />
+                	<span class="info">Internship</span>
+                </span>
+                <span class="point4">
+                	<span class="info" style="font-weight:bold;">20013.08</span><br />
+                	<span class="info dot">New Zealand</span><br />
+                	<span class="info">Working & Holiday</span>
+                </span>
+                <span class="point5">
+                	<span class="info dot">Photoshop</span>
+                </span>
+                <span class="point6">
+                	<span class="info dot">Dreamwaver</span>
+                </span>
+                <span class="point7">
+                	<span class="info dot">Html&CSS </span>
+                </span>
+                <span class="point8">
+                	<span class="info dot">PHP&Mysql </span>
+                </span>
+                <span class="point9">
+                	<span class="info dot">jQuery&Ajax </span>
+                </span>
+                <div id="aboutme">
+        			<h1 style="font-size:30px;">My name is Angelina Zhang Xue.</h1>
+        			<h2 style="font-size:18px;">I want to make career in Web design ,UI/UE design field.</h2>
+                	<p style="padding-top: 20px; font-size:15px;">I didn't work as designer before. It might be hard for company to have a person without that muce relevant experience. What I want is juat a chance to go and let me impresss you.</p>
+        		</div>
             </div>
-        	<div class="text" id="aboutme">
-        		<h1>My name is Angelina Zhang Xue.</h1>
-        		<h2>I want to make career in Web design ,UI/UE design field.</h2>
-                <p>I didn't work as designer before. It's might be hard for company to have a person without that muce relevant experience. What I want is juat a chance to go and let it impresss you.</p>
-                <p>
-                <span class="event">University<br>Computer Science</span>
-                <span class="time">2012.10-2012.12</span>
-                <span class="event">Internship</span>
-                </p>
-        	</div>
+        	
         </section>
         
         <section id="gallery">	
+        	<div class="accordian">
+            	<ul>
+                	<li>
+                    	<div class="title"><span>image title</span></div>
+                        <a href="#">
+                        	<img src="assets/light-ray.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                    	<div class="title"><span>image title</span></div>
+                        <a href="#">
+                        	<img src="assets/light-ray.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                    	<div class="title"><span>image title</span></div>
+                        <a href="#">
+                        	<img src="assets/light-ray.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                    	<div class="title"><span>image title</span></div>
+                        <a href="#">
+                        	<img src="assets/light-ray.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                    	<div class="title"><span>image title</span></div>
+                        <a href="#">
+                        	<img src="assets/light-ray.jpg" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
         
         <section id="story13">
@@ -75,8 +136,8 @@
     <div id="footer">
     </div>
     
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+<!--    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
     <script type="text/javascript" src="script/lib/jquery.easing.js"></script>
-    <script type="text/javascript" src="script/jquery.scrollpath.js"></script>
+    <script type="text/javascript" src="script/jquery.scrollpath.js"></script>-->
 </body>
 </html>

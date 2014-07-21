@@ -4,32 +4,27 @@
 	padding:0;
 }
 section{
-	border:solid 1px white;
+/*	weight:100%;*/
+	height:580px;
 }
 body{
-	overflow:hidden;/* to disable browser scroll bar*/
+/*	overflow:hidden;/* to disable browser scroll bar*/
 	margin:0;
 	background:url(../assets/bg_atown.png) fixed 0 0 no-repeat;
 	background-size:cover;
+	font-family:"Lato","HelveticaNeue",Helvetica,Arial,sans-serif;
+	color:#fff;
 }
 h1{
-	color:#fff;
 /*	font-size: 70px;*/
-	font-family:"Lato","HelveticaNeue",Helvetica,Arial,sans-serif;
 /*	font-weight:300;
 	text-align:center;*/
 }
 h2{
-	color:#fff;
 /*	font-size:22px;*/
-	font-family:"Lato","HelveticaNeue",Helvetica,Arial,sans-serif;
 /*	font-weight:300;
 	text-align:center;
 	line-height:28px;*/
-}
-p{
-	color:#fff;
-	font-family:"Lato","HelveticaNeue",Helvetica,Arial,sans-serif;
 }
 a{
 	color:#fff;
@@ -105,8 +100,10 @@ li{
 	left:0;
 }
 #container section{
-	position:absolute;
 	z-index:2000;
+}
+#home{
+	margin-top:12%;
 }
 #home-txt{
 	margin:12% 20% 0 20%;
@@ -142,12 +139,6 @@ a#resume:hover{
 	filter:alpha(opacity=80);
 	color:rgba(0,0,0,0.7);/*make the text transparency, it may not obvious now. when the background image keep changing, it shows*/
 }
-#home{
-	top:-210px;
-	left:-320px;
-	height:580px;
-	width:1440px;
-}
 #home h1{
 	font-size:70px;
 	font-weight:300;
@@ -159,27 +150,21 @@ a#resume:hover{
 	text-align:center;
 	line-height:28px;
 }
-#me{
-	top:370px;
-	left:-320px;
-	width:1440px;
-	height:580px;
-}
 .career{
-	width:500px;
+	width:1010px;
 	height:400px;
-	background:url(../assets/career-subway.png) center no-repeat;
+	background:url(../assets/career-subway.png) left center no-repeat;
 	background-color:rgba(0,0,0,0.7);
-	position:absolute;
-	top:100px;
-	left:150px;
+	margin:100px auto;
+	position:relative;
 }
 #aboutme{
+	width:400px;
 	float:right;
-	width:50%;
+	margin:80px 80px auto 0;
 }
-.career{
-	margin:0 10%;
+#aboutme h2{
+	font-size:22px;
 }
 .info{
 	color:white;
@@ -190,10 +175,127 @@ a#resume:hover{
 .dot{
 	background:url(../assets/career-dot.png) left no-repeat;
 }
-.point{
+.point1{
 	position:absolute;
 	top:40px;
-	left:244px;
+	left:229px;
 }
-
+.point2{
+	position:absolute;
+	top:125px;
+	left:229px;
+}
+.point3{
+	position:absolute;
+	top:148px;
+	left:123px;
+	text-align:right;
+	width:95px;/*different position in FF,Opera,IE cause browsers show different word space */
+}
+.point3 .info{
+	padding:0 20px 0 0;
+}
+.point3 .dot{
+	background:url(../assets/career-dot.png) right no-repeat;
+}
+.point4{
+	position:absolute;
+	top:252px;
+	left:205px;
+}
+.point5{
+	position:absolute;
+	top:206px;
+	left:38px;
+	font-size:10px;
+}
+.point5 .info, .point6 .info{
+	padding:20px 0 0 0;
+}
+.point5 .dot{
+	background:url(../assets/career-dot.png) top right no-repeat;
+}
+.point6{
+	position:absolute;
+	top:241px;
+	left:107px;
+}
+.point6 .dot{
+	background:url(../assets/career-dot.png) top no-repeat;
+}
+.point7{
+	position:absolute;
+	top:205px;
+	left:205px;
+}
+.point7 .info, .point8 .info, .point9 .info{
+	padding:0 0 15px 15px;
+}
+.point7 .dot, .point8 .dot, .point9 .dot{
+	background:url(../assets/career-dot.png) left bottom no-repeat;
+}
+.point8{
+	position:absolute;
+	top:205px;
+	left:325px;
+}
+.point9{
+	position:absolute;
+	top:248px;
+	left:370px;
+}
+/* section gallery style */
+.accordian{
+	overflow:hidden;
+	margin:0 auto;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+	width: 2000px;
+	/*This will give ample space to the last item to move
+	instead of falling down/flickering during hovers.*/
+}
+.accordian li {
+	position: relative;
+	display: block;
+	width: 269px;
+	float: left;
 	
+	border-left: 1px solid #888;
+	
+	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	
+	/*Transitions to give animation effect*/
+	transition: all 0.8s;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	/*If you hover on the images now you should be able to 
+	see the basic accordian*/
+}
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {width: 120px;}
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {width: 870px;}
+
+
+.accordian li img {
+	display: block;
+}
+/*Image title styles*/
+.title {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0; bottom: 0;	
+	width: 640px;
+}
+.title span {
+	display: block;
+	padding: 20px;
+	font-size: 16px;
+}

@@ -17,7 +17,7 @@ $(document).ready(function(){
 		$("html body").animate({scrollTop:0},500);
 		return false;
 	});
-	$(".nav a").click(function(e){
+	$(".nav li a").click(function(e){
 		e.preventDefault();
 		element=$(this).attr("href")
 		switch(element){
@@ -27,6 +27,14 @@ $(document).ready(function(){
 			default: offset=2064;
 		};
 		$("html body").animate({scrollTop:offset},1000)	
+	});
+	
+	/************to make gallery img covered by transparent color when mouseout************/
+	$(".accordian li").mouseover(function(){
+		$("span.bg_canvas",this).css("display","none");
+	});
+	$(".accordian").mouseout(function(){
+		    $(".accordian span.bg_canvas").css("display","block");
 	});
 		
 /*	$(".nav a").click(function(e){

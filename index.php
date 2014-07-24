@@ -18,11 +18,14 @@
                 <li><a href="#me">ME</a></li>
                 <li><a href="#gallery">GALLERY</a></li>
                 <li class="dropdown"><a href="#story14">STORY</a>
-                		<ul class="dropdown-menu">
+                <!--		<ul class="dropdown-menu">
                     		<li><a href="#story14">2014</a></li>
                         	<li><a href="#story13">2013</a></li>
-                    	</ul>
+                    	</ul>-->
                 </li>
+                <a class="fb" title="Angelina Zhang xue on facebook" href="www.facebook.com" target="_blank">facebook</a>
+                <a class="db" title="Angelina on douban" href="http://www.douban.com/people/angelina999990/" target="_blank">douban</a>
+                <a class="mail" title="Say hello!" href="mailto:angelina999990@163.com?subject=say%20hello">email</a>
             </ul>
         </nav>
     </div>
@@ -76,43 +79,44 @@
         			<h1 style="font-size:30px;">My name is Angelina Zhang Xue.</h1>
         			<h2 style="font-size:18px;">I want to make career in Web design ,UI/UE design field.</h2>
                 	<p style="padding-top: 20px; font-size:15px;">I didn't work as designer before. It might be hard for company to have a person without that muce relevant experience. What I want is juat a chance to go and let me impresss you.</p>
+            		<p style="padding-top: 20px; font-size:15px;">New growing interest on photographing gives me a lot of fun. Not only for memory keeping,but it also a way to record both good and bad stuff,which reminds me how life could ever be.</p>
         		</div>
             </div>
         	
         </section>
         
-        <section id="gallery">	
+        <section id="gallery">
         	<div class="accordian">
             	<ul>
                 	<li>
+                    	<span class="bg_canvas"></span>
                     	<div class="title"><span>image title</span></div>
-                        <a href="#">
-                        	<img src="assets/light-ray.jpg" />
-                        </a>
+                        	<img src="assets/bg_seals.jpg" />
                     </li>
                     <li>
+                    	<span class="bg_canvas"></span>
                     	<div class="title"><span>image title</span></div>
-                        <a href="#">
-                        	<img src="assets/light-ray.jpg" />
-                        </a>
+                        	<img src="assets/gp_nugpt.jpg" />
                     </li>
                     <li>
+                    	<span class="bg_canvas"></span>
                     	<div class="title"><span>image title</span></div>
-                        <a href="#">
-                        	<img src="assets/light-ray.jpg" />
-                        </a>
+                        	<img src="assets/gp_bgarden.jpg" />
                     </li>
                     <li>
+                    	<span class="bg_canvas"></span>
                     	<div class="title"><span>image title</span></div>
-                        <a href="#">
                         	<img src="assets/light-ray.jpg" />
-                        </a>
                     </li>
                     <li>
+                    	<span class="bg_canvas"></span>
                     	<div class="title"><span>image title</span></div>
-                        <a href="#">
-                        	<img src="assets/light-ray.jpg" />
-                        </a>
+                        	<img src="assets/gp_qtown.jpg" />
+                    </li>
+                    <li>
+                    	<span class="bg_canvas"></span>
+                    	<div class="title"><span>image title</span></div>
+                        	<img src="assets/gp_rainbow.jpg" />
                     </li>
                 </ul>
             </div>

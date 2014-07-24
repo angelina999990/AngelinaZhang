@@ -94,6 +94,31 @@ li{
 	padding:10px 15px 10px 15px;
 	margin:auto 1px;
 }
+/******sub nav ******/
+.nav>a{
+	margin:0;
+	padding:0!important;
+	float:right;
+	margin-top:-24px;
+	display:block;
+	padding:0;
+	text-indent:-9999px;
+	width:45px;
+	height:62px;
+}
+a.mail{
+	background:url(../assets/icon_sprites.png) -80px -17px no-repeat;
+	border-right:solid 1px #666;
+}
+a.fb{
+	margin-right:45px;
+	background:url(../assets/icon_sprites.png) -158px -63px no-repeat;
+}
+a.db{
+	background:url(../assets/icon_sprites.png) -236px -131px no-repeat;
+	border-right:solid 1px #666;
+}
+
 #container{
 	position:relative;
 	top:62px;
@@ -106,7 +131,7 @@ li{
 	margin-top:12%;
 }
 #home-txt{
-	margin:12% 20% 0 20%;
+	margin:12% 18% 0 18%;
 	padding:3% 0;               /* these 2 lines above makes text vertical centered */
 	border-top:dashed 1px #fff;
 	border-bottom:dashed 1px #fff;
@@ -261,7 +286,7 @@ a#resume:hover{
 .accordian li {
 	position: relative;
 	display: block;
-	width: 269px;
+	width:225px;
 	float: left;
 	
 	border-left: 1px solid #888;
@@ -277,12 +302,20 @@ a#resume:hover{
 	/*If you hover on the images now you should be able to 
 	see the basic accordian*/
 }
+.bg_canvas{
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	width:870px;
+	height:580px;
+	background:url(../assets/bg_gp.png) left no-repeat;
+}
 /*Reduce with of un-hovered elements*/
-.accordian ul:hover li {width: 120px;}
+.accordian ul:hover li {width: 96px;}
 /*Lets apply hover effects now*/
 /*The LI hover style should override the UL hover style*/
 .accordian ul li:hover {width: 870px;}
-
 
 .accordian li img {
 	display: block;
@@ -292,10 +325,13 @@ a#resume:hover{
 	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	left: 0; bottom: 0;	
-	width: 640px;
+	width: 870px;
 }
 .title span {
 	display: block;
 	padding: 20px;
 	font-size: 16px;
+}
+#gallery{
+	position:relative;
 }

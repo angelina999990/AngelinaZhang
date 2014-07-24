@@ -7,6 +7,53 @@ $(document).ready(function(){
 		$(".dropdown-menu").stop().slideToggle(200);
 	});
 	
+	/***********resize <li> & <img> size acoording to different window size****************/
+/*	var w=$(window).width(); 
+	var h=$(window).height();
+	var img_h=h-62;
+	var img_w=img_h/0.666;			
+	var img_w_s=(w-img_w)/5;
+	
+/*	alert("img_w= "+img_w);
+	alert(w);alert(h);alert("img_h= "+img_h);
+	*/
+/*	if(img_h>650){
+		$(".accordian img").css("height",img_h+'px');
+	}
+	if(w>1400 || w<1000){
+		$(".accordian ul li").mouseenter(function(){
+			$(".accordian ul li").css("width",img_w_s+'px');
+			$(this).css("width",img_w+'px');
+			
+		})
+		$(".accordian ul li").mouseleave(function(){
+			$(".accordian ul li").css("width",w/6+'px');
+		})
+	}*/
+	
+	/***try********/
+	var imgresize = function(){
+		var w=$(window).width(); 
+		var h=$(window).height();
+		var img_h=h-62;
+		var img_w=img_h/0.666;			
+		var img_w_s=(w-img_w)/5;
+		$(".accordian img").css("height",img_h+'px');
+		$(".accordian ul li").css("width",w/6+'px');
+		$(".accordian ul li").mouseenter(function(){
+			$(".accordian ul li").css("width",img_w_s+'px');
+			$(this).css("width",img_w+'px');
+			
+		})
+		$(".accordian ul li").mouseleave(function(){
+			$(".accordian ul li").css("width",w/6+'px');
+		})
+	}
+	
+	imgresize();
+	
+	$(window).resize(imgresize);
+	
 /*	$("#click_me").click(function(e){
 		e.preventDefault();
 		$("#me").ScrollTo({

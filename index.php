@@ -17,7 +17,7 @@
             	<li class="active"><a id="click_me" href="#home">HOME</a></li>
                 <li><a href="#me">ME</a></li>
                 <li><a href="#gallery">GALLERY</a></li>
-                <li class="dropdown"><a href="#story14">STORY</a>
+                <li class="dropdown"><a href="#story14">CONTACT</a>
                 <!--		<ul class="dropdown-menu">
                     		<li><a href="#story14">2014</a></li>
                         	<li><a href="#story13">2013</a></li>
@@ -91,7 +91,7 @@
                 	<li>
                     	<span class="bg_canvas"></span>
                     	<div class="title"><span>image title</span></div>
-                        	<img src="assets/bg_seals.jpg" />
+                        	<img src="assets/gp_seals.jpg" />
                     </li>
                     <li>
                     	<span class="bg_canvas"></span>
@@ -106,7 +106,7 @@
                     <li>
                     	<span class="bg_canvas"></span>
                     	<div class="title"><span>image title</span></div>
-                        	<img src="assets/light-ray.jpg" />
+                        	<img src="assets/gp_lightray.jpg" />
                     </li>
                     <li>
                     	<span class="bg_canvas"></span>
@@ -132,7 +132,8 @@
         <section id="story14">
         	<div class="text">
             	<h1></h1>
-                <p></p>
+                <p>Thanks for viewing my website.</p>
+                <p>This website is designed for personal using. </p>
             </div>
         </section>
     </div>

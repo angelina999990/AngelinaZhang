@@ -8,39 +8,25 @@ $(document).ready(function(){
 	});
 	
 	/***********resize <li> & <img> size acoording to different window size****************/
-/*	var w=$(window).width(); 
-	var h=$(window).height();
-	var img_h=h-62;
-	var img_w=img_h/0.666;			
-	var img_w_s=(w-img_w)/5;
-	
-/*	alert("img_w= "+img_w);
-	alert(w);alert(h);alert("img_h= "+img_h);
-	*/
-/*	if(img_h>650){
-		$(".accordian img").css("height",img_h+'px');
-	}
-	if(w>1400 || w<1000){
-		$(".accordian ul li").mouseenter(function(){
-			$(".accordian ul li").css("width",img_w_s+'px');
-			$(this).css("width",img_w+'px');
-			
-		})
-		$(".accordian ul li").mouseleave(function(){
-			$(".accordian ul li").css("width",w/6+'px');
-		})
-	}*/
+
 	
 	/***try********/
 	var imgresize = function(){
-		var w=$(window).width(); 
-		var h=$(window).height();
+		/**********get width & height of window and calculate the space for img**********/
+		w=$(window).width(); //var w=... declare a local variable while w=... declare a globe variable directly
+		h=$(window).height();
+		
+		/*resize the height of <section> when window size changed to make sure scroll to right place when navbar is clicked*/
+		$("section").css("height",h-62+'px');
+		
 		var img_h=h-62;
 		var img_w=img_h/0.666;			
 		var img_w_s=(w-img_w)/5;
-		$(".accordian img").css("height",img_h+'px');
+		$(".accordian img").css("height",img_h+'px');	//set img height & width to fit window size
 		$(".accordian ul li").css("width",w/6+'px');
-		$(".accordian ul li").mouseenter(function(){
+		
+		/********set img width&height when mouse over it**************/	
+		$(".accordian ul li").mouseenter(function(){ 
 			$(".accordian ul li").css("width",img_w_s+'px');
 			$(this).css("width",img_w+'px');
 			
@@ -49,32 +35,47 @@ $(document).ready(function(){
 			$(".accordian ul li").css("width",w/6+'px');
 		})
 	}
-	
+	/*initializ the webpage when it's first loaded*/
 	imgresize();
 	
 	$(window).resize(imgresize);
 	
-/*	$("#click_me").click(function(e){
-		e.preventDefault();
-		$("#me").ScrollTo({
-			duration:1500
-		});
-	});*/
-	$("#click_me").click(function(){
-		$("html body").animate({scrollTop:0},500);
-		return false;
-	});
+	/******when the nav ele is clicked move to related place ********/
+/*	h=$(window).height();*/
+	$("section").css("height",h-62+'px');	
 	$(".nav li a").click(function(e){
 		e.preventDefault();
-		element=$(this).attr("href")
-		switch(element){
+/*		var h=$(window).height();*/ 
+		var m=$("#home").css("margin-top");
+		element=$(this).attr("href");
+/*		switch(element){
 			case '#home': offset=0; break;
 			case '#me': offset=742; break;
 			case '#gallery': offset=1422; break;
 			default: offset=2064;
-		};
+		};*/
+		
+		if(element=='#home'){
+			offset=0;
+		}
+		else if(element=='#me'){
+			offset=parseInt(h)+parseFloat(m)-62;
+		}
+		else if(element=='#gallery'){
+			offset=2*parseInt(h)+parseFloat(m)-2*62;
+		}
+		else{
+			offset=3*parseInt(h)+parseFloat(m)-2*62;
+		}
+		
 		$("html body").animate({scrollTop:offset},1000)	
 	});
+	
+	$("#togallery").click(function(){
+		offset=2*parseInt(h)+parseFloat(m)-2*62;
+		$("html body").animate({scrollTop:offset},1000);
+		return false;
+	})
 	
 	/************to make gallery img covered by transparent color when mouseout************/
 	$(".accordian li").mouseover(function(){
@@ -150,4 +151,50 @@ $(document).ready(function(){
 		});
 	});*/
 
+	/*********************js for resume pop up**************************/
+/*	var popupStatus = 0;
+	function loadup(){
+	//loads popup only if it is disabled
+		if(popupStatus==0){
+			$("#cv img").css({
+				"width": w/3,
+				"height": h
+			});
+			$("#cv").css({
+				"width": w/3,
+				"height": h
+			});
+			$("#cv").fadeIn("slow");
+			popupStatus = 1;
+		}
+	}
+	
+	function disable(){
+	//disables popup only if it is enabled
+		if(popupStatus==1){
+			$("#cv").fadeOut("slow");
+			popupStatus = 0;
+		}
+	}
+	
+	function centering(){
+		var margintop = $("#home").css("margin-top");
+		var top=0-parseFloat(margintop)-62;
+		$("#cv").css({
+			"position":"absolute",
+			"top":top,
+			"left":w/3
+		})
+		
+	}
+	
+	$("#resume").click(function(e){
+		e.preventDefault();
+		centering();
+		loadup();
+	})
+	$("#close").click(function(e){
+		e.preventDefault();
+		disable();
+	})*/
 });

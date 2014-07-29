@@ -15,17 +15,6 @@ body{
 	font-family:"Lato","HelveticaNeue",Helvetica,Arial,sans-serif;
 	color:#fff;
 }
-h1{
-/*	font-size: 70px;*/
-/*	font-weight:300;
-	text-align:center;*/
-}
-h2{
-/*	font-size:22px;*/
-/*	font-weight:300;
-	text-align:center;
-	line-height:28px;*/
-}
 a{
 	color:#fff;
 	text-decoration:none;
@@ -164,6 +153,21 @@ a#resume:hover{
 	filter:alpha(opacity=80);
 	color:rgba(0,0,0,0.7);/*make the text transparency, it may not obvious now. when the background image keep changing, it shows*/
 }
+/********* cv css ********/
+#cv{
+	display:none;
+	z-index:9999;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8);
+}
+#close{
+	position:absolute;
+	top:4px;
+	right:6px;
+	font-size:14px;
+	font-weight:700;
+}
 #home h1{
 	font-size:70px;
 	font-weight:300;
@@ -175,13 +179,20 @@ a#resume:hover{
 	text-align:center;
 	line-height:28px;
 }
+#me{
+	position:relative;
+}
 .career{
 	width:1010px;
 	height:400px;
 	background:url(../assets/career-subway.png) left center no-repeat;
 	background-color:rgba(0,0,0,0.7);
-	margin:100px auto;
-	position:relative;
+/*	margin:100px auto;
+	position:relative;*/
+	position:absolute; /**to make div absolute centered*/
+	margin:auto;
+	top:0;bottom:0;right:0;left:0;
+	
 }
 #aboutme{
 	width:400px;
@@ -333,4 +344,92 @@ a#resume:hover{
 	display: block;
 	padding: 20px;
 	font-size: 16px;
+}
+/**********css of section 4***********/
+#more{
+	position:relative;
+	margin-top:62px;
+}
+#road_sign{
+	width:1050px;
+	height:450px;
+	position:absolute;
+	bottom:0;
+	margin-left:10%;
+	background:url(../assets/sign.png) bottom center no-repeat;
+}
+#road_sign a{
+	width:150px;
+	height:70px;
+}
+.sign1{
+	position:absolute;
+	background:url(../assets/sign_sprites.png) -48px -46px no-repeat;
+	top:234px;
+	left:30px;
+}
+.sign1:hover{
+	background:url(../assets/sign_sprites_hover.png) -48px -46px no-repeat;
+}
+.sign2{
+	position:absolute;
+	background:url(../assets/sign_sprites.png) -150px -154px no-repeat;
+	top:165px;
+	left:290px;
+	text-indent:-9999px;
+}
+.sign2:hover{
+	background:url(../assets/sign_sprites_hover.png) -150px -154px no-repeat;
+}
+.sign3{
+	position:absolute;
+	background:url(../assets/sign_sprites.png) -251px -313px no-repeat;
+	top:219px;
+	left:600px;
+}
+.sign3:hover{
+	background:url(../assets/sign_sprites_hover.png) -251px -313px no-repeat;
+}
+.sign4{
+	position:absolute;
+	background:url(../assets/sign_sprites.png) -56px -460px no-repeat;
+	top:204px;
+	left:785px;
+}
+.sign4:hover{
+	background:url(../assets/sign_sprites_hover.png) -56px -460px no-repeat;
+}
+.sign5{
+	position:absolute;
+	background:url(../assets/sign_sprites.png) -218px -583px no-repeat;
+	top:155px;
+	left:905px;
+}
+.sign5:hover{
+	background:url(../assets/sign_sprites_hover.png) -218px -583px no-repeat;
+}
+
+
+.sign1,.sign2,.sign3,.sign4,.sign5{
+	text-indent:-9999px;
+}
+div.text{
+	width:600px;
+	margin:0 auto;
+	padding-top:7%;
+}
+.text h1{
+	font-size:70px;
+	font-weight:300;
+	text-align:left;
+}
+.text p{
+	font-size:30px;
+	text-align:left;
+}
+#togallery{
+	font-weight:bolder;
+}
+#togallery:hover{
+	color:#EC4D00;
 }

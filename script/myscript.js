@@ -1,16 +1,15 @@
 // JavaScript Document
 $(document).ready(function(){
-	$(".dropdown").mouseover(function(){
+/*	$(".dropdown").mouseover(function(){
     	$(".dropdown-menu").stop().slideToggle(200);
   	});
 	$(".dropdown").mouseout(function(){
 		$(".dropdown-menu").stop().slideToggle(200);
-	});
+	});*/
 	
 	/***********resize <li> & <img> size acoording to different window size****************/
 
 	
-	/***try********/
 	var imgresize = function(){
 		/**********get width & height of window and calculate the space for img**********/
 		w=$(window).width(); //var w=... declare a local variable while w=... declare a globe variable directly
@@ -22,8 +21,10 @@ $(document).ready(function(){
 		var img_h=h-62;
 		var img_w=img_h/0.666;			
 		var img_w_s=(w-img_w)/5;
+		var span_w=img_w-30;
 		$(".accordian img").css("height",img_h+'px');	//set img height & width to fit window size
 		$(".accordian ul li").css("width",w/6+'px');
+		$(".title span").css("width",span_w+'px');
 		
 		/********set img width&height when mouse over it**************/	
 		$(".accordian ul li").mouseenter(function(){ 
@@ -44,17 +45,11 @@ $(document).ready(function(){
 /*	h=$(window).height();*/
 	$("section").css("height",h-62+'px');	
 	$(".nav li a").click(function(e){
-		e.preventDefault();
+//		e.preventDefault();
+		e.preventDefault ? e.preventDefault() : e.returnValue = false; //sometimes e.preventDefault() doesn't work for IE
 /*		var h=$(window).height();*/ 
 		var m=$("#home").css("margin-top");
 		element=$(this).attr("href");
-/*		switch(element){
-			case '#home': offset=0; break;
-			case '#me': offset=742; break;
-			case '#gallery': offset=1422; break;
-			default: offset=2064;
-		};*/
-		
 		if(element=='#home'){
 			offset=0;
 		}
@@ -68,13 +63,14 @@ $(document).ready(function(){
 			offset=3*parseInt(h)+parseFloat(m)-2*62;
 		}
 		
-		$("html body").animate({scrollTop:offset},1000)	
+		$("body,html").animate({scrollTop:offset},1000)
+			
 	});
 	
-	$("#togallery").click(function(){
-		offset=2*parseInt(h)+parseFloat(m)-2*62;
+	$("#togallery").click(function(e){
+		e.preventDefault();
+		var offset=2*parseInt(h)+parseFloat(m)-2*62;alert(offset);
 		$("html body").animate({scrollTop:offset},1000);
-		return false;
 	})
 	
 	/************to make gallery img covered by transparent color when mouseout************/
@@ -84,14 +80,6 @@ $(document).ready(function(){
 	$(".accordian").mouseout(function(){
 		    $(".accordian span.bg_canvas").css("display","block");
 	});
-		
-/*	$(".nav a").click(function(e){
-		e.preventDefault();
-		element=$(this).attr("href");
-		$(element).ScrollTo({
-			duration:1000
-		});
-	});*/
 	
 /*		var path = $.fn.scrollPath("getPath",{
 			scrollSpeed:150,
@@ -152,7 +140,7 @@ $(document).ready(function(){
 	});*/
 
 	/*********************js for resume pop up**************************/
-/*	var popupStatus = 0;
+	var popupStatus = 0;
 	function loadup(){
 	//loads popup only if it is disabled
 		if(popupStatus==0){
@@ -196,5 +184,5 @@ $(document).ready(function(){
 	$("#close").click(function(e){
 		e.preventDefault();
 		disable();
-	})*/
+	})
 });

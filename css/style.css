@@ -339,11 +339,12 @@ a#resume:hover{
 	left: 0; bottom: 0;
 /*width of .title to fix different window size*/	
 	width: 2000px;
+	height:60px;
 }
 .title span {
 	display: block;
 	padding: 20px;
-	font-size: 16px;
+	font-size: 12px;
 }
 /**********css of section 4***********/
 #more{
